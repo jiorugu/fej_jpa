@@ -85,4 +85,10 @@ public class Mitarbeiter implements Serializable {
 		this.filiales2 = filiales2;
 	}
 
+	@Override
+	public String toString() {
+		return "Mitarbeiter [idMitarbeiter=" + idMitarbeiter + ", name=" + name
+				+ "]";
+	}
+
 }
