@@ -49,8 +49,8 @@ public class Jpa_Controller
     @RequestMapping(value ="/mitarbeiter", method=RequestMethod.POST)
     @ResponseBody
     public String createMitarbeiter(
-            @RequestParam(value="id", required=true) Integer id,
-            @RequestParam(value="name", required=true) String name)
+            @RequestParam(value="id", required=false) Integer id,
+            @RequestParam(value="name", required=false) String name)
     {
         Mitarbeiter a = new Mitarbeiter();
         a.setIdMitarbeiter(id);
