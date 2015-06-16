@@ -46,7 +46,7 @@ public class Jpa_Controller
         return "User " + id + " does not exist.";
     }
    
-    @RequestMapping(value ="/mitarbeiter/create", method=RequestMethod.GET)
+    @RequestMapping(value ="/mitarbeiter", method=RequestMethod.POST)
     @ResponseBody
     public String createMitarbeiter(
             @RequestParam(value="id", required=true) Integer id,
@@ -59,7 +59,7 @@ public class Jpa_Controller
         return a.toString();
     }
    
-    @RequestMapping(value ="/mitarbeiter/{id}/delete", method=RequestMethod.GET)
+    @RequestMapping(value ="/mitarbeiter/{id}", method=RequestMethod.DELETE)
     @ResponseBody
     public String deleteMitarbeiter(@PathVariable int id)
     {
